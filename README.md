@@ -48,7 +48,9 @@ A simple RESTful backend for Foodie Hub, a public food ordering system. Browse r
 ## Postman Testing Examples
 
 1. Add a restaurant
+
    POST /restaurants
+
    Json
    
    ```bash
@@ -59,34 +61,40 @@ A simple RESTful backend for Foodie Hub, a public food ordering system. Browse r
    }
 
 2. Add a customer
+
    POST /customers
+
    Json
    ```bash
-  {
+   {
      "name": "Amina",
      "phone": "0700000001"
-  }
+   }
 
 3. Place an order
+ 
    POST /orders
+ 
    Json
    ```bash
-  {
+   {
      "customer_id": 1,
      "restaurant_id": 2,
      "items": [
      { "menu_id": 8, "quantity": 2 },
      { "menu_id": 7, "quantity": 1 }
-  ]
-  }
+   ]
+   }
 
 4. Update order status
+ 
    PUT /orders/1/status
+ 
    Json
    ```bash
-  {
+   {
      "status": "completed"
-  }
+   }
 
 ## Notes
 
